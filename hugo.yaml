@@ -1,0 +1,71 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Luke Beukelman
+theme: hugo-profile
+
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+  
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: Luke Beukelman
+
+  education:
+    enable: true
+    items:
+      - title: Bachelors of Computer Science + Data Science
+        school:
+          name: Colorado School of Mines
+          url: https://www.mines.edu/
+        date: August 2020 - May 2023
+        GPA: 3.323
+      - title: Masters of Computer Science
+        school:
+          name: Colorado School of Mines
+          url: https://www.mines.edu/
+        date: August 2023 - May 2024
+        GPA: 3.575
+  
+  experience:
+    enable: true
+    items:
+      - job: ITS Student Intern
+        company: Thompson School District
+        date: Aug 2018 - May 2020
+      - job: ITS Student Consultant
+        company: Colorado School of Mines - Mines Service Center
+        date: May 2021 - May 2022
+      - job: SOC Student Consultant
+        company: Colorado School of Mines - Security Operation Center
+        date: Jan 2022 - May 2022
+
+  contact:
+    enable: true
+    email: lbeuk@pm.me
+    btnName: Mail me
+
+  projects:
+    enable: true
+    items:
+      - title: Extensible Multi-level Parser (ExMLP)
+        content: An extensible framework for creating a nested and linked parser.
+        image: /images/exmlp_logo.png
+        badges:
+          - "Haskell"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/lbeuk/ExMLP/tree/main
