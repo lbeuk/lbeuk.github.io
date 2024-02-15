@@ -2,8 +2,6 @@ baseURL: https://example.org/
 languageCode: en-us
 title: Luke Beukelman
 theme: hugo-profile
-
-
 outputs:
   home:
     - "HTML"
@@ -12,17 +10,48 @@ outputs:
   page:
     - "HTML"
     - "RSS"
-  
 Paginate: 3
 enableRobotsTXT: true
-
 markup:
   goldmark:
     renderer:
       unsafe: true
-
 params:
   title: Luke Beukelman
+
+  hero:
+    enable: true
+    intro: Hello, my name is
+    title: Luke Beukelman
+    image: /images/pfp.jpg
+    bottomImage:
+      enable: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/lbeuk
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/luke-beukelman-2840391b7
+  
+  about:
+    enable: true
+    title: About
+    image: /images/sand.jpg
+    skills:
+      enable: true
+      title: Here are some technologies I've picked up along my way
+      items:
+        - C/C++
+        - Common Lisp (SBCL)
+        - Go (Gin)
+        - Haskell
+        - Java
+        - Javascript (NodeJS, ExpressJS, React, Vue, Svelte)
+        - OCAML
+        - Python (Django, Flask)
+        - R
+        - SQL (PostgreSQL, MariaDB/MySQL)
+        - Rust (Actic, Rocket)
 
   education:
     enable: true
@@ -39,24 +68,65 @@ params:
           url: https://www.mines.edu/
         date: August 2023 - May 2024
         GPA: 3.575
-  
+
   experience:
     enable: true
     items:
+      - job: Operating Systems TA
+        company: CSM CS Dept
+        companyUrl: https://cs.mines.edu/
+        date: Aug 2022 - May 2024
+        content: |
+          I spent 2 academic years as a teaching assistant for the Operating Systems (CSCI 442) course at Colorado school of Mines. Many students consider
+          this to be the most challenging course in the CS curriculum, as it requires students to immediately immerse themselves in using the C language
+          and the Linux operating system, and requires them to code more at a lower level than any prior course got near to.
+
+          As a teaching assistant, I provided support for the programming projects, which were:
+          - An implementation of the tac command
+          - Implementing a shell that supports IO redirection and pipelining
+          - Creating a multi-threaded text compression program using pthreads
+          - Simulating process scheduling using the following algorithms: FCFS, Round Robbin, SPN, Priority, and MLFQ
+          - Simulating memory accesses using several algorithms
+
+          Additionally, during my second year, me and one other were put in charge of managing the gradescope autograder tooling, which used Docker and
+          a variety of scripting tools to produce JSON documents that were fed to gradescope for grades. We were responsible for troubleshooting,
+          maintaining, and improving the grading tooling and creating documentation for future generations of TAs.
+      - job: SOC Student Consultant
+        company: CSM ITS SOC
+        companyUrl: https://it.mines.edu/
+        date: Jan 2022 - May 2022
+        content: |
+          I spent a semester working with the Security Operations Center at Colorado School of Mines. My tasks primarily revolved around reviewing
+          Microsoft and firewall logs for unusual activity, and following up with faculty and students when unusual activity was detected to
+          troubleshoot the issues and determine the next step in the process.
+
+          Technologies and skills I learned during this experience include:
+          - Microsoft 365 security
+          - Palo Alto Firewall
+      - job: ITS Student Consultant
+        company: CSM Service Center
+        companyUrl: https://it.mines.edu/service-desk/
+        date: May 2021 - May 2022
+        content: |
+          I spent roughly one academic year providing helpdesk support at the Colorado School of Mines MSC (Mines Service Center). Tasks primarily revolved
+          around managing help tickets, providing lecture technology support, and troubleshooting personal and lab devices.
       - job: ITS Student Intern
         company: Thompson School District
+        companyUrl: https://www.tsd.org/departments/its
         date: Aug 2018 - May 2020
-      - job: ITS Student Consultant
-        company: Colorado School of Mines - Mines Service Center
-        date: May 2021 - May 2022
-      - job: SOC Student Consultant
-        company: Colorado School of Mines - Security Operation Center
-        date: Jan 2022 - May 2022
+        content: |
+          I spent my two final years in high school interning with the districts ITS, during which I spent roughly 5 hours a week during the academic year,
+          and 20-40 hours during the summers, providing IT support and configuring and provisioning district technology for faculty and students.
+
+          Technologies and skills I learned during this intership include:
+          - Microsoft Active Directory
+          - JAMF
+          - IT Level 1 support and customer service
 
   contact:
     enable: true
     email: lbeuk@pm.me
-    btnName: Mail me
+    btnName: Contact me
 
   projects:
     enable: true
